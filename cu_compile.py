@@ -25,10 +25,11 @@ cuda_path = args.cuda
 
 
 # compileオプション
-TF_CFLAGS = tf.sysconfig.get_include()
+TF_CFLAGS = "-I " + tf.sysconfig.get_include()
+TF_NSYNC = TF_CFLAGS + "/external/nsync/public"
 
 # リンクディレクトリ
-TF_LFLAGS = tf.sysconfig.get_lib()
+TF_LFLAGS = "-L " + tf.sysconfig.get_lib()
 
 GROUPING_PATH = BASE_DIR + '/tf_ops/grouping'
 INTERPOLATION_PATH = BASE_DIR + '/tf_ops/interpolation'
@@ -76,20 +77,20 @@ def cpp_sampling():
     return 'g++ -std=c++11 ' + os.path.join(SAMPLING_PATH, 'tf_sampling.cpp') \
            + ' ' + os.path.join(SAMPLING_PATH, 'tf_sampling_g.cu.o') + ' -o ' \
            + os.path.join(SAMPLING_PATH, 'tf_sampling_so.so') + ' -shared -fPIC ' \
-           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
 
 
 def cpp_interpolation():
     return 'g++ -std=c++11 ' + os.path.join(INTERPOLATION_PATH, 'tf_interpolate.cpp') + ' -o ' \
            + os.path.join(INTERPOLATION_PATH, 'tf_interpolate_so.so') + ' -shared -fPIC ' \
-           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
 
 
 def cpp_grouping():
     return 'g++ -std=c++11 ' + os.path.join(GROUPING_PATH, 'tf_grouping.cpp') \
            + ' ' + os.path.join(GROUPING_PATH, 'tf_grouping_g.cu.o') + ' -o ' \
            + os.path.join(GROUPING_PATH, 'tf_grouping_so.so') + ' -shared -fPIC ' \
-           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
 
 
 def nvcc_proc_call(gcolab=False):
