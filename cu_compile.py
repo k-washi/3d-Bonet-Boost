@@ -31,7 +31,7 @@ TF_CFLAGS = "-I " + tf.sysconfig.get_include()
 TF_NSYNC = TF_CFLAGS + "/external/nsync/public"
 
 # リンクディレクトリ
-TF_LFLAGS = "-L " + tf.sysconfig.get_lib()
+TF_LFLAGS = "-L " + tf.sysconfig.get_lib() + " -ltensorflow_framework"
 
 GROUPING_PATH = BASE_DIR + '/tf_ops/grouping'
 INTERPOLATION_PATH = BASE_DIR + '/tf_ops/interpolation'
@@ -39,7 +39,7 @@ SAMPLING_PATH = BASE_DIR + '/tf_ops/sampling'
 
 NVCC_CMD = os.path.join(cuda_path, 'bin', 'nvcc')
 CUDA_CFLAG = '-I ' + os.path.join(cuda_path, 'include')
-CUDA_LFLAG = '-lcudart -L ' + os.path.join(cuda_path, 'lib64') + '/'
+CUDA_LFLAG = '-lcudart -lcuda -L ' + os.path.join(cuda_path, 'lib64') + '/'
 
 
 def confirm_dir(path):
@@ -79,20 +79,20 @@ def cpp_sampling():
     return 'g++ -std=c++11 ' + os.path.join(SAMPLING_PATH, 'tf_sampling.cpp') \
            + ' ' + os.path.join(SAMPLING_PATH, 'tf_sampling_g.cu.o') + ' -o ' \
            + os.path.join(SAMPLING_PATH, 'tf_sampling_so.so') + ' -shared -fPIC ' \
-           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2 -D_GLIBCXX_USE_CXX11_ABI=0'
 
 
 def cpp_interpolation():
     return 'g++ -std=c++11 ' + os.path.join(INTERPOLATION_PATH, 'tf_interpolate.cpp') + ' -o ' \
            + os.path.join(INTERPOLATION_PATH, 'tf_interpolate_so.so') + ' -shared -fPIC ' \
-           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2 -D_GLIBCXX_USE_CXX11_ABI=0'
 
 
 def cpp_grouping():
     return 'g++ -std=c++11 ' + os.path.join(GROUPING_PATH, 'tf_grouping.cpp') \
            + ' ' + os.path.join(GROUPING_PATH, 'tf_grouping_g.cu.o') + ' -o ' \
            + os.path.join(GROUPING_PATH, 'tf_grouping_so.so') + ' -shared -fPIC ' \
-           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+           + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_NSYNC + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2 -D_GLIBCXX_USE_CXX11_ABI=0'
 
 
 def nvcc_proc_call(gcolab=False):
