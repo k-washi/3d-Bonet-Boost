@@ -25,10 +25,10 @@ cuda_path = args.cuda
 
 
 # compileオプション
-TF_CFLAGS = " ".join(tf.sysconfig.get_include())
+TF_CFLAGS = tf.sysconfig.get_include()
 
 # リンクディレクトリ
-TF_LFLAGS = " ".join(tf.sysconfig.get_lib())
+TF_LFLAGS = tf.sysconfig.get_lib()
 
 GROUPING_PATH = BASE_DIR + '/tf_ops/grouping'
 INTERPOLATION_PATH = BASE_DIR + '/tf_ops/interpolation'
@@ -118,5 +118,7 @@ def cpp_proc_call(gcolab=False):
 
 
 if __name__ == "__main__":
+    print("-"*30)
+    print(" ")
     nvcc_proc_call()
     cpp_proc_call()
