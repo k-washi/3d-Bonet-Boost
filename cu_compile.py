@@ -1,3 +1,7 @@
+"""
+Operation作成に伴うcuda, cppのコンパイル コマンドの出力
+https://www.tensorflow.org/guide/create_op
+"""
 import os
 import sys
 
@@ -5,14 +9,13 @@ import tensorflow as tf
 import subprocess
 import argparse
 
-
 BASE_DIR = os.path.join(os.path.dirname(__file__), '..')
 sys.path.append(BASE_DIR)
 
-#from utils.logger import set_logger
-#import utils.config_ini as config
+# from utils.logger import set_logger
+# import utils.config_ini as config
 
-#logger = set_logger(__name__)
+# logger = set_logger(__name__)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cuda', help='path to cuda directory', default='/usr/local/cuda-10.1')
@@ -20,15 +23,12 @@ args = parser.parse_args()
 
 cuda_path = args.cuda
 
-"""
-Operation作成に伴うcuda, cppのコンパイル
-https://www.tensorflow.org/guide/create_op
-"""
+
 # compileオプション
-TF_CFLAGS = " ".join(tf.sysconfig.get_compile_flags())
+TF_CFLAGS = " ".join(tf.sysconfig.get_include())
 
 # リンクディレクトリ
-TF_LFLAGS = " ".join(tf.sysconfig.get_link_flags())
+TF_LFLAGS = " ".join(tf.sysconfig.get_lib())
 
 GROUPING_PATH = BASE_DIR + '/tf_ops/grouping'
 INTERPOLATION_PATH = BASE_DIR + '/tf_ops/interpolation'
@@ -44,16 +44,20 @@ def confirm_dir(path):
         return
     raise Exception("{} がありません".format(path))
 
+
 def confirm_file(path):
     if os.path.isfile(path):
         logger.debug("OK: {}".format(path))
         return
     raise Exception("{} がありません".format(path))
 
+
 confirm_dir(GROUPING_PATH)
 confirm_dir(INTERPOLATION_PATH)
 confirm_dir(SAMPLING_PATH)
-#confirm_file(config.CUDA_PATH)
+
+
+# confirm_file(config.CUDA_PATH)
 
 
 def nvcc_grouping():
@@ -74,10 +78,12 @@ def cpp_sampling():
            + os.path.join(SAMPLING_PATH, 'tf_sampling_so.so') + ' -shared -fPIC ' \
            + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
 
+
 def cpp_interpolation():
     return 'g++ -std=c++11 ' + os.path.join(INTERPOLATION_PATH, 'tf_interpolate.cpp') + ' -o ' \
            + os.path.join(INTERPOLATION_PATH, 'tf_interpolate_so.so') + ' -shared -fPIC ' \
            + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
+
 
 def cpp_grouping():
     return 'g++ -std=c++11 ' + os.path.join(GROUPING_PATH, 'tf_grouping.cpp') \
@@ -86,7 +92,7 @@ def cpp_grouping():
            + TF_CFLAGS + ' ' + CUDA_CFLAG + ' ' + TF_LFLAGS + ' ' + CUDA_LFLAG + ' -O2'
 
 
-def nvcc_proc_call(gcolab = False):
+def nvcc_proc_call(gcolab=False):
     gr = nvcc_grouping()
     sm = nvcc_sampling()
     if gcolab is False:
@@ -96,7 +102,8 @@ def nvcc_proc_call(gcolab = False):
         print("!" + gr)
         print("!" + sm)
 
-def cpp_proc_call(gcolab = False):
+
+def cpp_proc_call(gcolab=False):
     gr = cpp_grouping()
     sm = cpp_sampling()
     inter = cpp_interpolation()
@@ -108,6 +115,7 @@ def cpp_proc_call(gcolab = False):
         print("!" + gr)
         print("!" + sm)
         print("!" + inter)
+
 
 if __name__ == "__main__":
     nvcc_proc_call()
