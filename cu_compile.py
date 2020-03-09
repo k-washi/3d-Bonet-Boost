@@ -19,9 +19,11 @@ sys.path.append(BASE_DIR)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cuda', help='path to cuda directory', default='/usr/local/cuda-10.1')
+parser.add_argument('--googleColab', action='store_true')
 args = parser.parse_args()
 
 cuda_path = args.cuda
+google_colab = args.googleColab
 
 
 # compileオプション
@@ -121,5 +123,5 @@ def cpp_proc_call(gcolab=False):
 if __name__ == "__main__":
     print("-"*30)
     print(" ")
-    nvcc_proc_call()
-    cpp_proc_call()
+    nvcc_proc_call(gcolab=google_colab)
+    cpp_proc_call(gcolab=google_colab)
