@@ -37,13 +37,13 @@ google_colab = args.googleColab
 
 # compileオプション
 cflag = tf.sysconfig.get_compile_flags()
-TF_CFLAGS = "-I " + cflag[0]
+TF_CFLAGS = cflag[0]
 TF_CFLAGS_D = cflag[1]
 TF_NSYNC = TF_CFLAGS + "/external/nsync/public"
 
 # リンクディレクトリ
 clink = tf.sysconfig.get_link_flags()
-TF_LFLAGS = "-L " + clink[0] + " " + clink[1]
+TF_LFLAGS = clink[0] + " " + clink[1]
 
 GROUPING_PATH = BASE_DIR + '/tf_ops/grouping'
 INTERPOLATION_PATH = BASE_DIR + '/tf_ops/interpolation'
