@@ -10,6 +10,8 @@ https://www.tensorflow.org/guide/create_op
 !g++ -std=c++11 3D-BoNet/tf_ops/../tf_ops/sampling/tf_sampling.cpp 3D-BoNet/tf_ops/../tf_ops/sampling/tf_sampling_g.cu.o -o 3D-BoNet/tf_ops/../tf_ops/sampling/tf_sampling_so.so -shared -fPIC -I /usr/local/lib/python3.6/dist-packages/tensorflow_core/include -I /usr/local/cuda-10.1/include -I /usr/local/lib/python3.6/dist-packages/tensorflow_core/include/external/nsync/public -L /usr/local/lib/python3.6/dist-packages/tensorflow_core -l:libtensorflow_framework.so.1 -lcudart -lcuda -L /usr/local/cuda-10.1/lib64 -O2 -D_GLIBCXX_USE_CXX11_ABI=0
 !g++ -std=c++11 3D-BoNet/tf_ops/../tf_ops/interpolation/tf_interpolate.cpp -o 3D-BoNet/tf_ops/../tf_ops/interpolation/tf_interpolate_so.so -shared -fPIC -I /usr/local/lib/python3.6/dist-packages/tensorflow_core/include -I /usr/local/cuda-10.1/include -I /usr/local/lib/python3.6/dist-packages/tensorflow_core/include/external/nsync/public -L /usr/local/lib/python3.6/dist-packages/tensorflow_core -l:libtensorflow_framework.so.1 -lcudart -lcuda -L /usr/local/cuda-10.1/lib64 -O2 -D_GLIBCXX_USE_CXX11_ABI=0
 
+cflag: ref
+https://github.com/lsds/KungFu/commit/a7faaf326163122d3890a725427c61179651d6d5
 """
 import os
 import sys
