@@ -82,5 +82,5 @@ if __name__ == "__main__":
     smdatas.append(smls_pmaks)
     one_list_plot(ls_pmask, names[-1], y_min=-0.1, y_max=1.2)
 
-    #list_plot(datas, names, figname="test")
+    list_plot(datas, names, figname="test")
     list_plot(smdatas, names, figname="smooth")
