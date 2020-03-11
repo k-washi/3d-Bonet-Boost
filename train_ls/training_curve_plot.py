@@ -12,8 +12,6 @@ def pickle_load(path):
 def list_plot(datas, names, figname = "test"):
     plt.figure()
 
-    if len(datas[0]) != len(names[0]):
-        raise Exception("Args error: 入力の長さが違う")
     for i in range(len(datas)):
         step = range(0, len(datas[i]))
         plt.plot(step, datas[i], label=names[i], alpha=0.5)
@@ -45,7 +43,7 @@ if __name__ == "__main__":
     datas = []
     smdatas = []
     names = []
-    file_name = "area1_ep10/"
+    file_name = "all_ep10/"
 
     names.append("psemce")
     data_path = file_name + "ls_psemce.pickle"
@@ -64,7 +62,7 @@ if __name__ == "__main__":
         datas.append(ls_bbscore)
     smls_bbscore = smooth_curve(ls_bbscore)
     smdatas.append(smls_bbscore)
-    one_list_plot(ls_bbscore, names[-1], y_min=-0.1, y_max=0.3)
+    one_list_plot(ls_bbscore, names[-1], y_min=-0.1, y_max=0.5)
 
     names.append("bbvert")
     data_path = file_name + "ls_bbvert.pickle"
@@ -73,7 +71,7 @@ if __name__ == "__main__":
         datas.append(ls_bbvert)
     smls_bbvert = smooth_curve(ls_bbvert)
     smdatas.append(smls_bbvert)
-    one_list_plot(ls_bbvert, names[-1], y_min=-0.1, y_max=0.7)
+    one_list_plot(ls_bbvert, names[-1], y_min=-0.5, y_max=1.)
 
     names.append("pmask")
     data_path = file_name + "ls_pmask.pickle"
@@ -82,7 +80,7 @@ if __name__ == "__main__":
         datas.append(ls_pmask)
     smls_pmaks = smooth_curve(ls_pmask)
     smdatas.append(smls_pmaks)
-    one_list_plot(ls_pmask, names[-1], y_min=-0.1, y_max=0.7)
+    one_list_plot(ls_pmask, names[-1], y_min=-0.1, y_max=1.2)
 
     #list_plot(datas, names, figname="test")
-    #list_plot(smdatas, names, figname="smooth")
+    list_plot(smdatas, names, figname="smooth")

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="" />
+    <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/access_colab.sh" beforeDir="false" afterPath="$PROJECT_DIR$/access_colab.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/bbscore.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbscore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/bbvert.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbvert.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/pmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/pmask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/psemce.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/psemce.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/smooth.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/smooth.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/training_curve_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/training_curve_plot.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,21 +27,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train_ls/training_curve_plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="513">
+              <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/train_ls/img/smooth.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -51,7 +54,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
+    <option name="width" value="714" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -59,7 +62,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -88,6 +90,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,33 +195,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/psemce.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/pmask.png">
+    <entry file="file://$PROJECT_DIR$/train_ls/img/bbscore.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/train_ls/img/bbvert.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/bbscore.png">
+    <entry file="file://$PROJECT_DIR$/train_ls/img/pmask.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_ls/img/psemce.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_ls/img/test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train_ls/img/smooth.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/train_ls/training_curve_plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="513">
+          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/smooth.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
