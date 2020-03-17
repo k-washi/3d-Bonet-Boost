@@ -2,108 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/3d-Bonet-Boost.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/3d-Bonet-Boost.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoNet_S3DIS_starter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/BoNet_S3DIS_starter.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonet_s3dis_retraining.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/bonet_s3dis_retraining.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonet_s3dis_training.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/bonet_s3dis_training.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonet_traingin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/bonet_traingin.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_bbscore.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_bbvert.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_pmask.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_psemce.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_bbscore.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_bbvert.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_pmask.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_psemce.pickle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/bbscore.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbscore.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/bbvert.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbvert.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/pmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/pmask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/psemce.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/psemce.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/img/smooth.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/smooth.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_ls/img/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train_ls/training_curve_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/training_curve_plot.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cu_compile_v1.15.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/train_ls/training_curve_plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/cu_compile.py" />
-        <option value="$PROJECT_DIR$/cu_compile_v1.15.py" />
-        <option value="$PROJECT_DIR$/train_ls/training_curve_plot.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="714" />
-    <option name="height" value="900" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="3d-Bonet-Boost" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3d-Bonet-Boost" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3d-Bonet-Boost" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3d-Bonet-Boost" type="462c0819:PsiDirectoryNode" />
-              <item name="train_ls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3d-Bonet-Boost" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3d-Bonet-Boost" type="462c0819:PsiDirectoryNode" />
-              <item name="train_ls" type="462c0819:PsiDirectoryNode" />
-              <item name="area1_ep10" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="3d-Bonet-Boost" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3d-Bonet-Boost" type="462c0819:PsiDirectoryNode" />
-              <item name="train_ls" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1ZEdyDon8fd1AcqVbG6MeXl7d4F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/notebook" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="training_curve_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -146,77 +90,30 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cu_compile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/bbscore.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/bbvert.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/pmask.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/psemce.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/test.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/img/smooth.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cu_compile_v1.15.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train_ls/training_curve_plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="85" column="19" selection-start-line="85" selection-start-column="19" selection-end-line="85" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="WindowStateProjectService">
+    <state x="507" y="211" key="FileChooserDialogImpl" timestamp="1584409616618">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="507" y="211" key="FileChooserDialogImpl/0.0.1440.900@0.0.1440.900" timestamp="1584409616618" />
+    <state width="1419" height="244" key="GridCell.Tab.0.bottom" timestamp="1584410992468">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584410992468" />
+    <state width="1419" height="244" key="GridCell.Tab.0.center" timestamp="1584410992467">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584410992467" />
+    <state width="1419" height="244" key="GridCell.Tab.0.left" timestamp="1584410992466">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584410992466" />
+    <state width="1419" height="244" key="GridCell.Tab.0.right" timestamp="1584410992467">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584410992467" />
+    <state x="221" y="89" key="SettingsEditor" timestamp="1584409642068">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1584409642068" />
   </component>
 </project>

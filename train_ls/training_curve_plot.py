@@ -9,7 +9,7 @@ def pickle_load(path):
 
     return data
 
-def list_plot(datas, names, figname = "test"):
+def list_plot(datas, names, figname = "test", y_min = -1.0, y_max=2.):
     plt.figure()
 
     for i in range(len(datas)):
@@ -17,7 +17,7 @@ def list_plot(datas, names, figname = "test"):
         plt.plot(step, datas[i], label=names[i], alpha=0.5)
 
     plt.legend()
-    plt.ylim([-0.5, 2])
+    plt.ylim([y_min, y_max])
     plt.savefig('img/' + figname + '.png')
 
 def one_list_plot(data, name, y_min = -1., y_max = 2.):
@@ -43,7 +43,7 @@ if __name__ == "__main__":
     datas = []
     smdatas = []
     names = []
-    file_name = "all_ep10/"
+    file_name = "/Users/washizakikai/dev/work/qbs/data/bonet-model-trained/"
 
     names.append("psemce")
     data_path = file_name + "ls_psemce.pickle"
@@ -71,7 +71,7 @@ if __name__ == "__main__":
         datas.append(ls_bbvert)
     smls_bbvert = smooth_curve(ls_bbvert)
     smdatas.append(smls_bbvert)
-    one_list_plot(ls_bbvert, names[-1], y_min=-0.5, y_max=1.)
+    one_list_plot(ls_bbvert, names[-1], y_min=-1., y_max=1.)
 
     names.append("pmask")
     data_path = file_name + "ls_pmask.pickle"
@@ -83,4 +83,4 @@ if __name__ == "__main__":
     one_list_plot(ls_pmask, names[-1], y_min=-0.1, y_max=1.2)
 
     list_plot(datas, names, figname="test")
-    list_plot(smdatas, names, figname="smooth")
+    list_plot(smdatas, names, figname="smooth", y_min=-0.1, y_max=0.5)
