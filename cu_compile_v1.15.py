@@ -53,7 +53,7 @@ SAMPLING_PATH = BASE_DIR + '/tf_ops/sampling'
 
 NVCC_CMD = os.path.join(cuda_path, 'bin', 'nvcc')
 CUDA_CFLAG = '-I ' + os.path.join(cuda_path, 'include')
-CUDA_LFLAG = '-lcudart -lcuda -L ' + os.path.join(cuda_path, 'lib64')
+CUDA_LFLAG = '-lcudart -L ' + os.path.join(cuda_path, 'lib64')
 
 
 def confirm_dir(path):
