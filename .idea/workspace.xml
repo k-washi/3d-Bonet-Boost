@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/3d-Bonet-Boost.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/3d-Bonet-Boost.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoNet_S3DIS_starter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/BoNet_S3DIS_starter.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonet_s3dis_retraining.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/bonet_s3dis_retraining.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonet_s3dis_training.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/bonet_s3dis_training.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bonet_traingin.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/bonet_traingin.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_bbscore.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_bbvert.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_pmask.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/all_ep10/ls_psemce.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_bbscore.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_bbvert.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_pmask.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/area1_ep10/ls_psemce.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/bbscore.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbscore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/bbvert.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbvert.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/pmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/pmask.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/psemce.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/psemce.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/smooth.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/smooth.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/training_curve_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/training_curve_plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train_ls/train_model" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,22 +75,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="507" y="211" key="FileChooserDialogImpl/0.0.1440.900@0.0.1440.900" timestamp="1584409616618" />
-    <state width="1419" height="244" key="GridCell.Tab.0.bottom" timestamp="1584410992468">
+    <state width="1419" height="244" key="GridCell.Tab.0.bottom" timestamp="1584416317969">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584410992468" />
-    <state width="1419" height="244" key="GridCell.Tab.0.center" timestamp="1584410992467">
+    <state width="1419" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584416317969" />
+    <state width="1419" height="244" key="GridCell.Tab.0.center" timestamp="1584416317968">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584410992467" />
-    <state width="1419" height="244" key="GridCell.Tab.0.left" timestamp="1584410992466">
+    <state width="1419" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584416317968" />
+    <state width="1419" height="244" key="GridCell.Tab.0.left" timestamp="1584416317968">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584410992466" />
-    <state width="1419" height="244" key="GridCell.Tab.0.right" timestamp="1584410992467">
+    <state width="1419" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584416317968" />
+    <state width="1419" height="244" key="GridCell.Tab.0.right" timestamp="1584416317969">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584410992467" />
+    <state width="1419" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584416317969" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1584409642068">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
