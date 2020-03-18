@@ -43,11 +43,10 @@ num_points = args.num_point
 
 #データの読み込み
 input_files = files = sorted(glob.glob(os.path.join(input, '*')))
-print(input_files)
 
 for i, data_file in enumerate(input_files):
     point, label = get_qbs_data(data_file)
-    batch = area_to_block(point, num_points=num_points)
+    batch = area_to_block(point, num_points=num_points, label=label)
 
     output_file = os.path.join(output, "area_{}.h5".format(i))
     print('> Saving batch to {} ...'.format(output_file))

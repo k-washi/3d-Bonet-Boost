@@ -79,8 +79,10 @@ def get_areas(point, dist=5.):
 
     return xareas, yareas
 
+
 def _concate_point_labal(point, label):
     return np.concatenate([point, label], axis=1)
+
 
 def sample_point(cloud, num_samples):
     """
@@ -91,7 +93,7 @@ def sample_point(cloud, num_samples):
     """
     n = cloud.shape[0]
     if n >= num_samples:
-        indices = np.random.choice(n, num_samples, replace=False)
+        indices = np.random.choice(n, num_samples, replace=True) # replaceをTrueにして、重複は許可するものとする。
     else:
         print("Info point sample: data num < sample num")
         indices = np.random.choice(n, num_samples - n, replace=True)
@@ -100,8 +102,7 @@ def sample_point(cloud, num_samples):
     return sampled
 
 
-
-def area_to_block(point, num_points, label = None, dist=15, threshold=100, size = 1.0):
+def area_to_block(point, num_points, label=None, dist=15, threshold=100, size=1.0):
     if label is not None:
         point = _concate_point_labal(point, label)
 
@@ -119,8 +120,16 @@ def area_to_block(point, num_points, label = None, dist=15, threshold=100, size 
             continue
         block = point[cond, :]
 
-        for _ in range(math.floor(block.shape[0] / num_points)):
-            # データが少ないので複数回サンプリングを繰り返す
+        #　ニューラルネットワークの入力に対して、データセットの点群を多いのでサンプリングする。
+        # train_ls/img/cover_rate2にデータの9割以上をサンプリングできる回数を示す
+        # 今回は、(全体の点数/ サンプリング点数) x 2 + 1とする。
+        # ただし, 全体の点数 <= サンプリング点数の場合、1回のみサンプリングする。
+        if block.shape[0] <= num_points:
+            sampling_num = 1
+        else:
+            sampling_num = math.floor(block.shape[0] / num_points) * 2 + 1
+
+        for _ in range(sampling_num):
             block = sample_point(block, num_points)
             blocks.append(block)
 
@@ -148,11 +157,13 @@ def area_to_block(point, num_points, label = None, dist=15, threshold=100, size 
         batch[:, :, 9:11] = blocks[:, :, 3:5]
     return batch
 
+
 def save_batch_h5(fname, batch):
     fp = h5py.File(fname)
     coords = batch[:, :, 0:3]
     points = batch[:, :, 3:9]
     labels = batch[:, :, 9:11]
+
     fp.create_dataset('coords', data=coords, compression='gzip', dtype='float32')
     fp.create_dataset('points', data=points, compression='gzip', dtype='float32')
     fp.create_dataset('labels', data=labels, compression='gzip', dtype='int64')
@@ -174,8 +185,8 @@ if __name__ == "__main__":
 
     point, label = get_qbs_data(pickle_path)
     print(point.shape, label.shape)
-    #cloud = _concate_point_labal(point, label)
-    #print(cloud.shape)
+    # cloud = _concate_point_labal(point, label)
+    # print(cloud.shape)
     # get_areas(point, dist=5)
     batch = area_to_block(point, 4096)
     print(batch.shape)
