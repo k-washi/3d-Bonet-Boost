@@ -43,7 +43,7 @@ if __name__ == "__main__":
     datas = []
     smdatas = []
     names = []
-    file_name = "/Users/washizakikai/dev/work/qbs/data/bonet-model-trained/"
+    file_name = "/Users/washizakikai/dev/work/qbs/data/qbs-forest-trained/"
 
     names.append("psemce")
     data_path = file_name + "ls_psemce.pickle"
@@ -83,4 +83,4 @@ if __name__ == "__main__":
     one_list_plot(ls_pmask, names[-1], y_min=-0.1, y_max=1.2)
 
     list_plot(datas, names, figname="test")
-    list_plot(smdatas, names, figname="smooth", y_min=-0.1, y_max=0.5)
+    list_plot(smdatas, names, figname="smooth", y_min=-0., y_max=1.)

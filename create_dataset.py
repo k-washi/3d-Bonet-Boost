@@ -2,7 +2,7 @@
 pickleデータから、BoNetに入力するh5pyデータ形式へ変更する
 
 example:
-     python create_dataset.py -i ../../data/qbs-data -o ../../data/qbs-h5 -area_dist 10
+     python create_dataset.py -i ../../data/qbs-data -o ../../data/qbs-h5 -num_point 4092 -area_dist 10
 """
 
 import argparse

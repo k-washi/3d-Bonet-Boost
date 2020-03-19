@@ -194,7 +194,7 @@ def area_to_block(point, num_points, label=None, dist=15, threshold=100, size=1.
 
     print("1ブロックに含まれるインスタンスの数が40を超えたブロック数 {0} / {1}".format(count, num_blocks))
 
-    batch[:, :, 0:3] = blocks[:, :, 0:3]
+    #batch[:, :, 0:3] = blocks[:, :, 0:3]
 
     if label is not None:
         batch[:, :, 9:11] = blocks[:, :, 3:5]
