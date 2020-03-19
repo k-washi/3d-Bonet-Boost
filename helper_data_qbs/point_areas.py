@@ -64,6 +64,27 @@ def _areas_value(vmin, vmax, dist=5.):
             break
     return areas
 
+def boost_arera(areas, dist):
+    """
+    areaをスライド
+    :param areas:
+    :param dist:
+    :return:
+    """
+    if dist < 2:
+        return areas
+    if len(areas) < 2:
+        return areas
+
+    temp = []
+    for area in areas[:-1]:
+        temp.append(area)
+        for i in range(2,4):
+            a_min, a_max = area[0] + int(dist/i), area[1] + int(dist/i)
+            temp.append((a_min, a_max))
+
+    temp.append(areas[-1])
+    return temp
 
 def get_areas(point, dist=5.):
     pmins, pmaxs = _xyz_min_max(point)
@@ -93,9 +114,9 @@ def sample_point(cloud, num_samples):
     """
     n = cloud.shape[0]
     if n >= num_samples:
-        indices = np.random.choice(n, num_samples, replace=True) # replaceをTrueにして、重複は許可するものとする。
+        indices = np.random.choice(n, num_samples, replace=True)  # replaceをTrueにして、重複は許可するものとする。
     else:
-        print("Info point sample: data num < sample num")
+        # print("Info point sample: data num {0} < sample num {1}".format(n, num_samples))
         indices = np.random.choice(n, num_samples - n, replace=True)
         indices = list(range(n)) + list(indices)
     sampled = cloud[indices, :]
@@ -107,32 +128,43 @@ def area_to_block(point, num_points, label=None, dist=15, threshold=100, size=1.
         point = _concate_point_labal(point, label)
 
     limit = np.amax(point[:, 0:3], axis=0)
+    for i in range(3):
+        if limit[i] < 0:
+            limit[i] = np.min(point[:, i])
+
     xareas, yareas = get_areas(point, dist)
+    #print(xareas)
     cells = [(xi, yi) for xi in range(len(xareas)) for yi in range(len(yareas))]
 
     blocks = []
+    count = 0
+    skip_count = 0
     for xi, yi in cells:
         xcond = (xareas[xi][0] <= point[:, 0]) & (point[:, 0] <= xareas[xi][1])
         ycond = (yareas[yi][0] <= point[:, 1]) & (point[:, 1] <= yareas[yi][1])
         cond = xcond & ycond
 
         if np.sum(cond) < threshold:
+            skip_count += 1
             continue
         block = point[cond, :]
 
-        #　ニューラルネットワークの入力に対して、データセットの点群を多いのでサンプリングする。
+        # 　ニューラルネットワークの入力に対して、データセットの点群を多いのでサンプリングする。
         # train_ls/img/cover_rate2にデータの9割以上をサンプリングできる回数を示す
         # 今回は、(全体の点数/ サンプリング点数) x 2 + 1とする。
         # ただし, 全体の点数 <= サンプリング点数の場合、1回のみサンプリングする。
+
         if block.shape[0] <= num_points:
             sampling_num = 1
+            count += 1
         else:
             sampling_num = math.floor(block.shape[0] / num_points) * 2 + 1
 
         for _ in range(sampling_num):
             block = sample_point(block, num_points)
             blocks.append(block)
-
+    print("点数が少なすぎるためスキップしました。：{}".format(skip_count))
+    print("点数が足りないブロック数 {0} / {1}".format(count, len(blocks)))
     blocks = np.stack(blocks, axis=0)
     print("Create {0} point area block: {1}".format(num_points, blocks.shape[0]))
 
@@ -143,18 +175,32 @@ def area_to_block(point, num_points, label=None, dist=15, threshold=100, size=1.
     # [9:11] - semantic and instance labels
     num_blocks = blocks.shape[0]
     batch = np.zeros((num_blocks, num_points, 11))
+    count = 0
+
     for b in range(num_blocks):
         minx = min(blocks[b, :, 0])
         miny = min(blocks[b, :, 1])
         batch[b, :, 3] = blocks[b, :, 0] - (minx + size * 0.5)
         batch[b, :, 4] = blocks[b, :, 1] - (miny + size * 0.5)
+        batch[b, :, 5] = blocks[b, :, 2]
         batch[b, :, 6] = blocks[b, :, 0] / limit[0]
         batch[b, :, 7] = blocks[b, :, 1] / limit[1]
         batch[b, :, 8] = blocks[b, :, 2] / limit[2]
+
+        uq = np.unique(blocks[b, :, 4])
+        if uq.shape[0] > 40:
+            # print(uq.shape[0])
+            count += 1
+
+    print("1ブロックに含まれるインスタンスの数が40を超えたブロック数 {0} / {1}".format(count, num_blocks))
+
     batch[:, :, 0:3] = blocks[:, :, 0:3]
-    # batch[:, :, 5:9] = blocks[:, :, 2:6]
+
     if label is not None:
         batch[:, :, 9:11] = blocks[:, :, 3:5]
+
+    # batch[:, :, :] = batch[0, :, :]
+
     return batch
 
 
@@ -162,6 +208,7 @@ def save_batch_h5(fname, batch):
     fp = h5py.File(fname)
     coords = batch[:, :, 0:3]
     points = batch[:, :, 3:9]
+
     labels = batch[:, :, 9:11]
 
     fp.create_dataset('coords', data=coords, compression='gzip', dtype='float32')
@@ -188,6 +235,6 @@ if __name__ == "__main__":
     # cloud = _concate_point_labal(point, label)
     # print(cloud.shape)
     # get_areas(point, dist=5)
-    batch = area_to_block(point, 4096)
+    batch = area_to_block(point, 4096, label=label, dist=10)
     print(batch.shape)
     print("END")
