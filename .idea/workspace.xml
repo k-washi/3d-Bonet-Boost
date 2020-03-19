@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/eval/fvalue_eval.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eval/qbs_plot_helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_data_qbs/point_areas.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper_data_qbs/point_areas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/bbscore.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbscore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/bbvert.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbvert.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/cover_rate2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/pmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/pmask.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/psemce.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/psemce.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/smooth.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/smooth.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/smooth1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/training_curve_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/training_curve_plot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,22 +170,22 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="507" y="211" key="FileChooserDialogImpl/0.0.1440.900@0.0.1440.900" timestamp="1584409616618" />
-    <state width="1419" height="244" key="GridCell.Tab.0.bottom" timestamp="1584604737595">
+    <state width="1419" height="244" key="GridCell.Tab.0.bottom" timestamp="1584606990305">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584604737595" />
-    <state width="1419" height="244" key="GridCell.Tab.0.center" timestamp="1584604737594">
+    <state width="1419" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584606990305" />
+    <state width="1419" height="244" key="GridCell.Tab.0.center" timestamp="1584606990303">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584604737594" />
-    <state width="1419" height="244" key="GridCell.Tab.0.left" timestamp="1584604737594">
+    <state width="1419" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584606990303" />
+    <state width="1419" height="244" key="GridCell.Tab.0.left" timestamp="1584606990301">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584604737594" />
-    <state width="1419" height="244" key="GridCell.Tab.0.right" timestamp="1584604737595">
+    <state width="1419" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584606990301" />
+    <state width="1419" height="244" key="GridCell.Tab.0.right" timestamp="1584606990304">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584604737595" />
+    <state width="1419" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584606990304" />
     <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1584497930746">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
