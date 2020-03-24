@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/access_colab.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_dataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cu_compile.py" beforeDir="false" afterPath="$PROJECT_DIR$/cuda_compile_cmd/cu_compile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cu_compile_v1.15.py" beforeDir="false" afterPath="$PROJECT_DIR$/cuda_compile_cmd/cu_compile_v1.15.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eval/fvalue_eval.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eval/qbs_plot_helper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_data_qbs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_data_qbs/load_pickle.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_data_qbs/point_areas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/bonet_qbs_simple_train.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook/make_pickle.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook/make_pickle.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/qbs_data_helper.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/bbscore.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbscore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/bbvert.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/bbvert.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/pmask.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/psemce.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/psemce.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/smooth.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/smooth.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/img/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/img/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train_ls/training_curve_plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/train_ls/training_curve_plot.py" afterDir="false" />
-    </list>
+    <list default="true" id="d1516925-f92c-4577-8ce0-c983926d39b8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
