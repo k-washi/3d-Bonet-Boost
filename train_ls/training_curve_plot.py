@@ -18,7 +18,7 @@ def list_plot(datas, names, figname = "test", y_min = -1.0, y_max=2.):
 
     plt.legend()
     plt.ylim([y_min, y_max])
-    plt.savefig('./train_ls/img/' + figname + '.png')
+    plt.savefig('./3d-Bonet-Boost/train_ls/img/' + figname + '.png')
 
 def one_list_plot(data, name, y_min = -1., y_max = 2.):
     plt.figure()
@@ -26,7 +26,7 @@ def one_list_plot(data, name, y_min = -1., y_max = 2.):
     step = range(0, len(data))
     plt.plot(step, data)
     plt.ylim([y_min, y_max])
-    plt.savefig('./train_ls/img/' + name + '.png')
+    plt.savefig('./3d-Bonet-Boost/train_ls/img/' + name + '.png')
 
 
 def smooth_curve(points, factor=0.8):
