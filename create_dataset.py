@@ -2,7 +2,7 @@
 pickleデータから、BoNetに入力するh5pyデータ形式へ変更する
 
 example:
-     python create_dataset.py -i ../../data/qbs-data -o ../../data/qbs-h5 -num_point 4092 -area_dist 10
+     python create_dataset.py -i ../../data/pc-data -o ../../data/pc-h5 -num_point 4092 -area_dist 10
 """
 
 import argparse
@@ -11,8 +11,8 @@ import glob
 import os
 import sys
 
-from helper_data_qbs.load_pickle import get_qbs_data
-from helper_data_qbs.point_areas import area_to_block, save_batch_h5
+from helper_data_pc.load_pickle import get_pc_data
+from helper_data_pc.point_areas import area_to_block, save_batch_h5
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', help='path to input directory: pickle形式')
@@ -55,16 +55,17 @@ else:
     dists = [dist]
 
 # データの読み込み
-input_files = files = sorted(glob.glob(os.path.join(input, '*')))
+input_files = sorted(glob.glob(os.path.join(input, '*.pkl')))
 
 
 
 for i, data_file in enumerate(input_files):
-    point, label = get_qbs_data(data_file)
+    point, label = get_pc_data(data_file)
+
     batches = []
     for d in dists:
         batch = area_to_block(point, num_points=num_points, label=label, dist=d, threshold=1000) #  data_boost=dataset_boost
-
+        #print(batch[0][:10])
         if len(dists) == 1:
             output_file = os.path.join(output, "area_{0}.h5".format(i+1))
         else:

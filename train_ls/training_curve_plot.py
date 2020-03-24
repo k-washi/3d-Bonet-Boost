@@ -18,7 +18,7 @@ def list_plot(datas, names, figname = "test", y_min = -1.0, y_max=2.):
 
     plt.legend()
     plt.ylim([y_min, y_max])
-    plt.savefig('img/' + figname + '.png')
+    plt.savefig('./train_ls/img/' + figname + '.png')
 
 def one_list_plot(data, name, y_min = -1., y_max = 2.):
     plt.figure()
@@ -26,7 +26,7 @@ def one_list_plot(data, name, y_min = -1., y_max = 2.):
     step = range(0, len(data))
     plt.plot(step, data)
     plt.ylim([y_min, y_max])
-    plt.savefig('img/' + name + '.png')
+    plt.savefig('./train_ls/img/' + name + '.png')
 
 
 def smooth_curve(points, factor=0.8):
@@ -43,7 +43,20 @@ if __name__ == "__main__":
     datas = []
     smdatas = []
     names = []
-    file_name = "/Users/washizakikai/dev/work/qbs/data/qbs-forest-trained/"
+
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-i', help='path to input directory: h5')
+
+    args = parser.parse_args()
+
+    file_name = args.i
+
+    if file_name is not None and file_name != '':
+        file_name += '/'
+    else:
+        raise Exception('損失ファイルが置かれているディレクトリを選択してください')
 
     names.append("psemce")
     data_path = file_name + "ls_psemce.pickle"
@@ -83,4 +96,4 @@ if __name__ == "__main__":
     one_list_plot(ls_pmask, names[-1], y_min=-0.1, y_max=1.2)
 
     list_plot(datas, names, figname="test")
-    list_plot(smdatas, names, figname="smooth", y_min=-0., y_max=1.)
+    list_plot(smdatas, names, figname="smooth", y_min=-0.5, y_max=1.)

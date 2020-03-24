@@ -23,7 +23,7 @@ def _read_data(data_path):
         sys.exit(-1)
 
 
-def get_qbs_data(data_path):
+def get_pc_data(data_path):
     """
 
     :param data_path: pickle data path
@@ -81,11 +81,11 @@ def data_Fix(point, label):
 
 
 if __name__ == "__main__":
-    data_path = '/Users/washizakikai/dev/work/qbs/data/qbs-data'
+    data_path = '/Users/washizakikai/dev/work/pc/data/pc-data'
     file_name = 'xmin_-242_ymin_37_delta_50.pkl'
     pickle_path = os.path.join(data_path, file_name)
 
-    point, label = get_qbs_data(pickle_path)
+    point, label = get_pc_data(pickle_path)
     # print("Data length: ", len(point), len(label))
     # print("First daata: ", point[0], label[0])
 

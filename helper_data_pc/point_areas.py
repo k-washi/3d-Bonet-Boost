@@ -194,7 +194,7 @@ def area_to_block(point, num_points, label=None, dist=15, threshold=100, size=1.
 
     print("1ブロックに含まれるインスタンスの数が40を超えたブロック数 {0} / {1}".format(count, num_blocks))
 
-    #batch[:, :, 0:3] = blocks[:, :, 0:3]
+    batch[:, :, 0:3] = blocks[:, :, 0:3]
 
     if label is not None:
         batch[:, :, 9:11] = blocks[:, :, 3:5]
@@ -220,17 +220,17 @@ def save_batch_h5(fname, batch):
 if __name__ == "__main__":
     import sys
 
-    data_path = '/Users/washizakikai/dev/work/qbs/data/qbs-data'
+    data_path = '/Users/washizakikai/dev/work/pc/data/pc-data'
     file_name = 'xmin_-242_ymin_37_delta_50.pkl'
     pickle_path = os.path.join(data_path, file_name)
 
-    from load_pickle import get_qbs_data
+    from load_pickle import get_pc_data
 
     # point, label = _read_data(pickle_path)
     # print("Data length: ", len(point), len(label))
     # print("First daata: ", point[0], label[0])
 
-    point, label = get_qbs_data(pickle_path)
+    point, label = get_pc_data(pickle_path)
     print(point.shape, label.shape)
     # cloud = _concate_point_labal(point, label)
     # print(cloud.shape)
